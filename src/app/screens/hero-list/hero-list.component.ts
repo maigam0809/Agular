@@ -208,6 +208,16 @@ export class HeroListComponent implements OnInit {
     let updateHero = {...data};
     this.formObject = updateHero;
   }
+  inputValue ="";
+  updateInputValue(event){
+    this.inputValue = event.target.value;
+  }
+
+  currentDate ='';
+  gender = 2;
+   
+
+  
 
 
 
