@@ -11,7 +11,7 @@ var core_1 = require("@angular/core");
 var CategoryService = /** @class */ (function () {
     function CategoryService(http) {
         this.http = http;
-        this.API_URL = "http:://localhost:3000/categories";
+        this.API_URL = "http://localhost:3000/categories";
     } // gán giá trị cho http
     CategoryService.prototype.getAll = function () {
         return this.http.get(this.API_URL);

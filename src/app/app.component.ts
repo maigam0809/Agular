@@ -7,16 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-app';
-  gender: Number = 2;
-  borderColor: string = 'black';
-  money = 325620000;
-  currentDate = new Date();
-
-  inputValue: string = "";
-  updateInputValue(event: any){
-    this.inputValue = event.target.value;
-    if(this.inputValue.length > 5) this.borderColor = 'black';
-    else this.borderColor = 'red';
-  }
+  
   
 }

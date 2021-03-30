@@ -9,10 +9,13 @@ exports.__esModule = true;
 exports.ComicsService = void 0;
 var core_1 = require("@angular/core");
 var ComicsService = /** @class */ (function () {
-    // private API_URL = "http:://localhost:3000/categories";
-    // constructor(private http:HttpClient) { } // gán giá trị cho http
-    function ComicsService() {
-    }
+    function ComicsService(http) {
+        this.http = http;
+        this.API_COMICS = "http://localhost:3000/comics";
+    } // gán giá trị cho http
+    ComicsService.prototype.getAll = function () {
+        return this.http.get(this.API_COMICS);
+    };
     ComicsService = __decorate([
         core_1.Injectable({
             providedIn: 'root'

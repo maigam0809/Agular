@@ -7,7 +7,7 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class CategoryService {
-  private API_URL = "http:://localhost:3000/categories";
+  private API_URL = "http://localhost:3000/categories";
 
   constructor(private http:HttpClient) { } // gán giá trị cho http
 

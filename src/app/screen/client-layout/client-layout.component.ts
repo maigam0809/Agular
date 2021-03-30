@@ -14,7 +14,7 @@ export class ClientLayoutComponent implements OnInit {
 
    ngOnInit(): void {
     this.categoryService.getAll().subscribe(data =>{
-      console.log(data);
+      // console.log(data);
       this.cates = data;
     })
   }

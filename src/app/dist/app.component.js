@@ -11,19 +11,7 @@ var core_1 = require("@angular/core");
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
         this.title = 'my-app';
-        this.gender = 2;
-        this.borderColor = 'black';
-        this.money = 325620000;
-        this.currentDate = new Date();
-        this.inputValue = "";
     }
-    AppComponent.prototype.updateInputValue = function (event) {
-        this.inputValue = event.target.value;
-        if (this.inputValue.length > 5)
-            this.borderColor = 'black';
-        else
-            this.borderColor = 'red';
-    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'app-root',

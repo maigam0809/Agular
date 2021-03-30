@@ -9,10 +9,24 @@ exports.__esModule = true;
 exports.HomeComponent = void 0;
 var core_1 = require("@angular/core");
 var HomeComponent = /** @class */ (function () {
-    function HomeComponent() {
-        this.comicAmouse = 20;
+    function HomeComponent(ComicService, CategoryService) {
+        this.ComicService = ComicService;
+        this.CategoryService = CategoryService;
+        this.comics = [];
+        this.cates = [];
     }
     HomeComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        // Lấy tất cả dữ liệu trong comic
+        this.ComicService.getAll().subscribe(function (data) {
+            console.log(data);
+            _this.comics = data;
+        }),
+            // Lấy tất cả dữ liệu có trong category
+            this.CategoryService.getAll().subscribe(function (data) {
+                console.log(data);
+                _this.cates = data;
+            });
     };
     HomeComponent = __decorate([
         core_1.Component({

@@ -16,7 +16,7 @@ var ClientLayoutComponent = /** @class */ (function () {
     ClientLayoutComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.categoryService.getAll().subscribe(function (data) {
-            console.log(data);
+            // console.log(data);
             _this.cates = data;
         });
     };
